@@ -66,7 +66,7 @@ elif has? aplay; then
   obtainium $audio_raw | aplay -Dplug:default -q -f S16_LE -r 8000 &
 elif has? play; then
   # On Cygwin, if |play| is available (via sox), pre-fetch compressed audio.
-  obtainium $audio_gsm | play -t sox - &
+  obtainium $audio_gsm | play -t gsm - &
 fi
 audpid=$!
 
